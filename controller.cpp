@@ -158,7 +158,7 @@ void takeReading(){
     // Total experiment time update   
     T_tot = T_tot+T_sample;   //T_tot in seconds, for tracking
 
-    // OBSERVER - to be modified by students
+    // OBSERVER
 
     z1_hat_dot = (a11 - L1) * z1_hat + b1 * u + L1 * (encoderPos * K_encoder - x_sg);
     z2_hat_dot = (a12 - L2) * z2_hat + b2 * u + L2 * (encoderPos * K_encoder - x_sg);
@@ -167,7 +167,7 @@ void takeReading(){
     z1_hat = z1_hat + z1_hat_dot*T_sample;
     z2_hat = z2_hat + z2_hat_dot*T_sample;
     
-    // CONTROLLER - to be modified by students
+    // CONTROLLER
     u = k1 * z1_hat + k2 * z2_hat; 
 
     //Mapping between required voltage and 11.75V motor shield
